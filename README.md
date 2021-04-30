@@ -1,4 +1,4 @@
-#Polygon DID Method Specification
+# Polygon DID Method Specification
 
 ## Preface
 The polygon-did method specification is complaint with the [DID requirements](https://www.w3.org/TR/did-core/#ref-for-dfn-did-documents-3) specified by W3C Creredentials Community Group. For a detailed read on DID and other DID method specifications, one can refer [this](https://github.com/WebOfTrustInfo/rwot5-boston/blob/master/topics-and-advance-readings/did-primer.md)
@@ -28,7 +28,7 @@ A DID compatible with Polygon network will entail a prefix "did:polygon". This i
 For the polygon DID representation, the MSI (Method Specific Identifier) is an ethereum address, which can also be called as a Hex encoded secp256k1 compressed public key. 
 
 ```
-
+did:polygon:0x1CE7AB4d4Aee57Cac9FA09e951BB4452ED856367
 ```
 To be noted:
 The address corresponding to the user's private key or generated private key, is supposed to be used to carry out functions like Create, Resolve, Update and Delete. The account should also hold a minimum balance of Matic tokens to pay as gas.
@@ -40,18 +40,31 @@ The address corresponding to the user's private key or generated private key, is
 For this specification To create a polygon DID, the user is required to either hold a private key, of a Ethereum walllet, or the user can opt to generate one. For both cases the user summons the 'createDID' function with his available private key as parameter or without parameter if a new key pair needs to be genrated. The above said function returns:
 
 ```
-
+<address, publicKeyBase58, privateKey, DID_uri>
 ```
 
 Next the user will initiate a call to the registerDID function  with his generated DID uri and private Key and other parameters as contract address and RPC url(for chain identification). The function will create a corresponding DID Document of format given below and it will be logged on chain.
 
 ```
-
+{
+	"@context": "https://w3id.org/did/v1",
+	"id": "did:polygon:0x2C020b0112A1B98C1BB5FC490C44772357E73803",
+	"verificationMethod": [{
+		"id": "did:polygon:0x2C020b0112A1B98C1BB5FC490C44772357E73803",
+		"type": "EcdsaSecp256k1VerificationKey2019",
+		"controller": "did:polygon:0x2C020b0112A1B98C1BB5FC490C44772357E73803",
+		"publicKeyBase58": "7Lnm1frErwLwwZB1x2XbweLauYJpAZBjGxAXk55u248DEGGKF62apu9QuekaE3d7jMUUeHjk2F4sSYqKF3oeQ6b3ZLuMb"
+	}]
+}
 ```
 
 ### Resolve
 
 Resolving a DID implies the act of fetching the DID doc registered on chain. The resolver when queried with a DID returns the associated DID doc. A query is sent out to fetch the registered DID Doc from the chain. This Doc is then used for signing or verification purposes.
+
+#### Universal Resolver
+
+
 
 ### Update
 
@@ -60,5 +73,3 @@ The pattern to define the DID doc and the values associated with it is defined, 
 ### Delete
 
 The owner of DID doc holds the authority to his instance of DID doc on chain, and to provide him with true ownership, the network facilitates the user with ability to delete his DID doc instance from the chain at any point of time. It should be noted that only the owner/controller of the DID Doc, will be allowed to delete the instance.
-
-## Security Considerations
