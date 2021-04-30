@@ -64,7 +64,7 @@ Resolving a DID implies the act of fetching the DID doc registered on chain. The
 
 #### Universal Resolver
 
-
+A Universal Resolver is an identifier resolver that works with any decentralized identifier system, including Decentralized Identifiers (DIDs). Refer [here](https://github.com/decentralized-identity/universal-resolver). A driver for Polygon DID is added to universal resolver configurations.
 
 ### Update
 
