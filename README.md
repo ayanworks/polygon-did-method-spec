@@ -1,11 +1,11 @@
 #Polygon DID Method Specification
 
 ## Preface
-The polygon-did method specification, is complaint with the requirements specified by W3C Creredentials Community Group. For a detailed read on DID's and other DID method specifications, one can refer 
+The polygon-did method specification is complaint with the [DID requirements](https://www.w3.org/TR/did-core/#ref-for-dfn-did-documents-3) specified by W3C Creredentials Community Group. For a detailed read on DID and other DID method specifications, one can refer [this](https://github.com/WebOfTrustInfo/rwot5-boston/blob/master/topics-and-advance-readings/did-primer.md)
 
 ## Abstract
 
-The Polygon DID method allows any Ethereum key pair account to become a valid identity. For registration of the DID Document, a smart contract has been deployed on polygon testnet as well as main net with addresses:
+The Polygon DID method allows any Ethereum key pair account to become a valid identity. For registration of the DID Document, a smart contract has been deployed on polygon testnet and main net on addresses specified at [registry-contract](https://gitlab.com/polygon-did/polygon-did-registry-contract)
 
 ## Identity Controller
 
@@ -20,7 +20,7 @@ The polygon-register-smart-contract is deployed on
 
 ## DID Method Name
 
-The DID uri for Polygon specific DID method is: polygon .
+The DID uri for Polygon specific DID method is: 'polygon' .
 A DID compatible with Polygon network will entail a prefix "did:polygon". This is fixed and is based upon the DID specifications. 
 
 ## DID Method Specific Identifier
@@ -32,8 +32,6 @@ For the polygon DID representation, the MSI (Method Specific Identifier) is an e
 ```
 To be noted:
 The address corresponding to the user's private key or generated private key, is supposed to be used to carry out functions like Create, Resolve, Update and Delete. The account should also hold a minimum balance of Matic tokens to pay as gas.
-
-## Relationship to ERC1056
 
 ## CRUD
 
