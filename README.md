@@ -21,7 +21,7 @@ The polygon-register-smart-contract is deployed on
 ## DID Method Name
 
 The DID uri for Polygon specific DID method is: 'polygon' .
-A DID compatible with Polygon network will entail a prefix "did:polygon". This is fixed and is based upon the DID specifications. 
+A DID compatible with Polygon network will entail a prefix "did:polygon". This is fixed, and always in lower case based upon the DID specifications. 
 
 ## DID Method Specific Identifier
 
