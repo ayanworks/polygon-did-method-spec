@@ -68,7 +68,7 @@ A Universal Resolver is an identifier resolver that works with any decentralized
 
 ### Update
 
-The pattern to define the DID doc and the values associated with it is defined, but in some unforeseen circumstances it might be  required to change or edit the DID doc, for that purpose the update function has been included A DID Doc holds properties like, controller and public key, at some instances a user wishes to hold more than one public key or more than one controller, that is the time the update did can come in handy. On Polygon, only a DID controller is able to use the update facility.
+There is a set of rules pre-defined for how a DID document is supposed to be defined, but at times a need might arise to update the DID doc. So to help users update their DID doc, the Polygon DID method, has been enhanced with update DID functionality. This function is accessible only to the controller/owner of DID. 
 
 ### Delete
 
