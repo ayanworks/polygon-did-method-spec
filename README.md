@@ -6,7 +6,7 @@ The polygon-did method specification is complaint with the [DID requirements](ht
 
 ## Abstract
 
-The Polygon DID method allows any Ethereum key pair account to become a valid identity. For registration of the DID Document, a smart contract has been deployed on polygon testnet and main net on addresses specified at [registry-contract](https://gitlab.com/polygon-did/polygon-did-registry-contract)
+The Polygon DID method allows any Ethereum key pair account to become a valid identity. For registration of the DID Document, a smart contract has been deployed on polygon testnet and main net on addresses specified at [registry-contract](https://github.com/ayanworks/polygon-did-registry-contract)
 
 ## Target System
 
